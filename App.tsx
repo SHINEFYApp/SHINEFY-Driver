@@ -1,118 +1,60 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+import 'react-native-gesture-handler';
+import React, {Component} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {AppProvider, AppConsumer} from './src/Provider/context/AppProvider';
+import Stacknav from './src/Provider/Routenavigation';
+import {I18nManager} from 'react-native';
+import RNRestart from 'react-native-restart';
+import {localStorage} from './src/Provider/utilslib/Utils';
+import {LogBox} from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs(); //Ignore all log notifications
+LogBox.ignoreLogs([
+  'Animated: `useNativeDriver` was not specified. This is a required option and must be explicitly set to `true` or `false`',
+]);
+global.MapAddress = 'NA';
+class App extends Component {
+  componentDidMount = () => {
+    this.language_set();
   };
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
+  language_set = async () => {
+    let languagecathc = await localStorage.getItemObject('languagecathc');
+    let languagesetenglish = await localStorage.getItemObject(
+      'languagesetenglish',
+    );
+    if (languagecathc == 0) {
+      if (languagesetenglish == 3) {
+        if (I18nManager.isRTL) {
+          I18nManager.forceRTL(true);
+          I18nManager.allowRTL(true);
+        } else {
+          I18nManager.forceRTL(true);
+          I18nManager.allowRTL(true);
+        }
+        localStorage.removeItem('languagecathc');
+        localStorage.setItemObject('language', 1);
+        localStorage.removeItem('languagesetenglish');
+        RNRestart.Restart();
+      }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+      localStorage.setItemObject('languagesetenglish', 3);
+    }
+  };
+  render() {
+    return (
+      <NavigationContainer>
+        <AppProvider {...this.props}>
+          <AppConsumer>
+            {funcs => {
+              global.props = {...funcs};
+              return <Stacknav {...funcs} />;
+            }}
+          </AppConsumer>
+        </AppProvider>
+      </NavigationContainer>
+    );
+  }
+}
 
 export default App;

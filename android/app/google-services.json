@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "562441667186",
+    "project_id": "shinefydriver",
+    "storage_bucket": "shinefydriver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562441667186:android:62155af1f47f0d471e38eb",
+        "android_client_info": {
+          "package_name": "com.shinefydriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "562441667186-9qn44sja7jqb35oe8159g2k6g70cso11.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shinefydriver",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "562441667186-agviovuk99fdnca5srkjb8eva6qdgbt4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8eDMWY-nLW6rS4b-vPGMV-Bugq23WMfk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "562441667186-agviovuk99fdnca5srkjb8eva6qdgbt4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
