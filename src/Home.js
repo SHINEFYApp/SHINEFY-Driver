@@ -164,6 +164,7 @@ export default class Home extends Component {
       apifuntion
         .getApi(url, page)
         .then(obj => {
+    
           if (obj.success == 'true') {
             localStorage.setItemObject('user_arr', obj.user_details);
             localStorage.setItemObject('driver_home_data', obj.home_arr);
@@ -406,6 +407,7 @@ export default class Home extends Component {
                     keyExtractor={(item, index) => index.toString()}
                     data={this.state.today_booking_arr}
                     renderItem={({index, item}) => {
+                 
                       return (
                         <TouchableOpacity
                           onPress={() => {
@@ -443,6 +445,7 @@ export default class Home extends Component {
                                 {Lang_chg.bookingid1_txt[config.language]} :{' '}
                                 {item.booking_no}
                               </Text>
+                              {/* <Text>{item.vehicles.length ==1 ? }</Text> */}
                             </View>
                             <View
                               style={{
@@ -476,15 +479,19 @@ export default class Home extends Component {
                                 borderRadius: (mobileW * 1.5) / 100,
                                 paddingVertical: (mobileW * 2.5) / 100,
                               }}>
-                              <Image
-                                source={{
-                                  uri: config.img_url3 + item.vehicle_image,
-                                }}
-                                style={{
-                                  height: (mobileW * 14) / 100,
-                                  width: (mobileW * 16) / 100,
-                                }}
-                              />
+                              {
+                                item.vehicles.length == 1 ?
+                                <Image
+                                  source={{
+                                    uri: config.img_url3 + item.vehicle_image,
+                                  }}
+                                  style={{
+                                    height: (mobileW * 14) / 100,
+                                    width: (mobileW * 16) / 100,
+                                  }}
+                                /> :
+                                <Text>{item.vehicles.length} X </Text>
+                              }
                             </View>
                             <View style={{width: '27%', alignItems: 'center'}}>
                               <Text style={styles.text_style}>

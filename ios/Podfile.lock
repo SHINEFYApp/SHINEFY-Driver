@@ -1140,7 +1140,7 @@ PODS:
     - React
   - RNCPushNotificationIOS (1.11.0):
     - React-Core
-  - RNDateTimePicker (7.6.2):
+  - RNDateTimePicker (8.2.0):
     - React-Core
   - RNFBApp (19.0.1):
     - Firebase/CoreOnly (= 10.22.0)
@@ -1469,7 +1469,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
-  RNDateTimePicker: fc2e4f2795877d45e84d85659bebe627eba5c931
+  RNDateTimePicker: 40ffda97d071a98a10fdca4fa97e3977102ccd14
   RNFBApp: d0be9224f318cfd6501f1f83809453800cd04868
   RNFBMessaging: fcbca7e4158d528415b445c5c8b3ffb9027f0d27
   RNGestureHandler: 2e3251b41d462552997c61afd680220d019fea65
@@ -1479,7 +1479,7 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Toast: ec33c32b8688982cecc6348adeae667c1b9938da
   TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
-  Yoga: d17d2cc8105eed528474683b42e2ea310e1daf61
+  Yoga: 805bf71192903b20fc14babe48080582fee65a80
 
 PODFILE CHECKSUM: 6bd9562c330c139d9b4c7c93b3fbf88ad796556f
 

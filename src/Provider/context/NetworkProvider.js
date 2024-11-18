@@ -38,15 +38,12 @@ const styles = StyleSheet.create({
     activityIndicatorWrapper: {
         height: 80,
         width: 80,
-        borderRadius: 10,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: 'black',
         borderRadius: 6,
-        justifyContent: "space-around",
-        alignItems: "center",
+  
         alignSelf: "center",
     }
 })

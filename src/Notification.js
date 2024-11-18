@@ -51,7 +51,7 @@ export default class Notification extends Component {
   get_notification = async page => {
     let user_details = await localStorage.getItemObject('user_arr');
     let user_id = user_details.user_id;
-    let url = config.baseURL1 + 'get_notification.php?user_id=' + user_id;
+    let url = config.baseURL1 + 'get_notification?user_id=' + user_id;
 
     apifuntion
       .getApi(url, page)
@@ -258,7 +258,7 @@ export default class Notification extends Component {
             </View>
             {this.state.notification_arr != 'NA' && (
               <TouchableOpacity
-                style={{width: '20%', alignItems: 'center'}}
+            
                 activeOpacity={0.7}
                 onPress={() => {
                   this.data_delete();
@@ -267,6 +267,7 @@ export default class Notification extends Component {
                   fontFamily: Font.fontregular,
                   fontSize: (mobileW * 4) / 100,
                   color: Colors.whiteColor,
+                  width: '20%', alignItems: 'center'
                 }}>
                 {Lang_chg.clearAll[config.language]}
               </TouchableOpacity>

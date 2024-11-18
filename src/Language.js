@@ -220,6 +220,7 @@ export default class Language extends Component {
                         fontSize: (mobileW * 4.1) / 100,
                         fontFamily: Font.fontmedium,
                         textAlign: config.textRotate,
+                        color : Colors.textColors 
                       }}>
                       {item.language[config.language]}
                     </Text>

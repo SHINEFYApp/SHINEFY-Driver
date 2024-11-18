@@ -426,6 +426,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.notification_txt[config.language]}
                 </Text>
@@ -484,6 +485,7 @@ export default class Setting extends Component {
                     fontSize: (mobileW * 4.2) / 100,
                     paddingTop: (mobileW * 0.4) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.changepassword_txt[config.language]}
                 </Text>
@@ -529,6 +531,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.contact_txt[config.language]}
                 </Text>
@@ -574,6 +577,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.faqs_txt[config.language]}
                 </Text>
@@ -621,6 +625,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.tearmsetting[config.language]}
                 </Text>
@@ -668,6 +673,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.privacy[config.language]}
                 </Text>
@@ -715,6 +721,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.about_us[config.language]}
                 </Text>
@@ -754,6 +761,7 @@ export default class Setting extends Component {
                   alignSelf: 'center',
                   flexDirection: 'row',
                   marginTop: (mobileH * 3.5) / 100,
+                  color : Colors.textColors
                 }}>
                 <View style={{width: '10%', paddingTop: (mobileW * 0.7) / 100}}>
                   <Image
@@ -770,6 +778,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.rate_txt[config.language]}
                 </Text>
@@ -815,6 +824,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.share_txt[config.language]}
                 </Text>
@@ -860,6 +870,7 @@ export default class Setting extends Component {
                     fontFamily: Font.fontregular,
                     fontSize: (mobileW * 4.2) / 100,
                     textAlign: config.textRotate,
+                    color : Colors.textColors
                   }}>
                   {Lang_chg.logout_txt[config.language]}
                 </Text>

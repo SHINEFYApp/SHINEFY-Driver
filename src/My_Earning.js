@@ -230,9 +230,11 @@ export default class My_Earning extends Component {
     this.setState({user_id: user_id});
     var url =
       config.baseURL + 'get_earning/' + user_id + '/' + date + '/' + type;
+
     apifuntion
       .getApi(url)
       .then(obj => {
+
         if (obj.success == 'true') {
           this.setState({
             total_earning: obj.total_earning,
@@ -295,10 +297,10 @@ export default class My_Earning extends Component {
       'Nov',
       'Dec',
     ];
-    var selected_date_arr = date._d;
-    var getDate = selected_date_arr.getDate();
-    var getMonth = selected_date_arr.getMonth() + 1;
-    var getYear = selected_date_arr.getFullYear();
+    var selected_date_arr = date;
+    var getDate = selected_date_arr?.getDate();
+    var getMonth = selected_date_arr?.getMonth() + 1;
+    var getYear = selected_date_arr?.getFullYear();
     if (getMonth < 10) {
       getMonth = '0' + getMonth;
     } else {

@@ -503,7 +503,7 @@ export default class Edit_profile extends Component {
                     style={{
                       fontFamily: Font.fontmedium,
                       fontSize: (mobileW * 4.3) / 100,
-                      color: Colors.signup_text_title,
+                      color: Colors.textColors,
                       textAlign: config.textRotate,
                     }}>
                     {Lang_chg.fullname_txt[config.language]}
@@ -576,7 +576,7 @@ export default class Edit_profile extends Component {
                       style={{
                         fontFamily: Font.fontmedium,
                         fontSize: (mobileW * 4.3) / 100,
-                        color: Colors.signup_text_title,
+                        color: Colors.textColors,
                         textAlign: config.textRotate,
                       }}>
                       {Lang_chg.mobile[config.language]}
@@ -614,7 +614,7 @@ export default class Edit_profile extends Component {
                     }}>
                     <Text
                       style={{
-                        color: Colors.signup_text_title,
+                        color: Colors.textColors,
                         fontFamily: Font.fontregular,
                         fontSize: (mobileW * 4) / 100,
                       }}>
@@ -668,7 +668,7 @@ export default class Edit_profile extends Component {
                     style={{
                       fontFamily: Font.fontmedium,
                       fontSize: (mobileW * 4.3) / 100,
-                      color: Colors.signup_text_title,
+                      color: Colors.textColors,
                       textAlign: config.textRotate,
                     }}>
                     {Lang_chg.email[config.language]}

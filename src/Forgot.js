@@ -92,11 +92,13 @@ export default class Forgot extends Component {
     }
     var data = new FormData();
     data.append('phone_number', phone_number);
+
     data.append('user_type', user_type);
     let url = config.baseURL + 'forgot_password';
     apifuntion
       .postApi(url, data)
       .then(obj => {
+
         if (obj.success == 'true') {
           var user_value = {
             user_id: obj.user_id,

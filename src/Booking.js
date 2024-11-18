@@ -89,9 +89,10 @@ export default class Booking extends Component {
       user_id +
       '/' +
       this.state.booking_id;
-    var booking_arr = await localStorage.getItemObject('get_booking_arr');
-    if (booking_arr == null) {
-      apifuntion
+      var booking_arr = await localStorage.getItemObject('get_booking_arr');
+      if (booking_arr == null) {
+ 
+        apifuntion
         .getApi(url)
         .then(obj => {
           if (obj.success == 'true') {
@@ -143,6 +144,7 @@ export default class Booking extends Component {
       apifuntion
         .getApi(url, 1)
         .then(obj => {
+
           if (obj.success == 'true') {
             this.setState({refresh: false});
             localStorage.setItemObject('user_arr', obj.user_details);
@@ -350,6 +352,7 @@ export default class Booking extends Component {
                         renderItem={({index, item}) => {
                           return (
                             <TouchableOpacity
+                          
                               onPress={() => {
                                 this.props.navigation.navigate(
                                   'Bookings_Details',

@@ -240,7 +240,6 @@ export default class Profile extends Component {
                   backgroundColor: 'white',
                   alignSelf: 'center',
                   marginTop: (mobileW * 10) / 100,
-                  elevation: 2,
                   borderRadius: (mobileW * 1) / 100,
                   flexDirection: 'row',
                   elevation: 3,
@@ -280,7 +279,7 @@ export default class Profile extends Component {
                   }}>
                   <Text
                     style={{
-                      color: Colors.edit_profile_txt_color,
+                      color: Colors.textColors,
                       fontFamily: Font.fontmedium,
                       fontSize: (mobileW * 4) / 100,
                       textAlign: config.textRotate,
@@ -295,7 +294,7 @@ export default class Profile extends Component {
                   width: (mobileW * 85) / 100,
                   backgroundColor: 'white',
                   alignSelf: 'center',
-                  elevation: 3,
+            
                   shadowOffset: {width: 0},
                   shadowColor: '#000',
                   shadowOpacity: 0.1,
@@ -335,7 +334,7 @@ export default class Profile extends Component {
                   }}>
                   <Text
                     style={{
-                      color: Colors.edit_profile_txt_color,
+                      color: Colors.textColors,
                       fontFamily: Font.fontmedium,
                       fontSize: (mobileW * 4) / 100,
                       textAlign: config.textRotate,
@@ -351,7 +350,7 @@ export default class Profile extends Component {
                   backgroundColor: 'white',
                   alignSelf: 'center',
                   marginTop: (mobileW * 5) / 100,
-                  elevation: 2,
+             
                   borderRadius: (mobileW * 1) / 100,
                   flexDirection: 'row',
                   elevation: 3,
@@ -390,7 +389,7 @@ export default class Profile extends Component {
                   }}>
                   <Text
                     style={{
-                      color: Colors.edit_profile_txt_color,
+                      color: Colors.textColors,
                       fontFamily: Font.fontmedium,
                       fontSize: (mobileW * 4) / 100,
                       textAlign: config.textRotate,
@@ -406,7 +405,7 @@ export default class Profile extends Component {
                   backgroundColor: 'white',
                   alignSelf: 'center',
                   marginTop: (mobileW * 5) / 100,
-                  elevation: 2,
+               
                   borderRadius: (mobileW * 1) / 100,
                   flexDirection: 'row',
                   elevation: 3,
@@ -447,7 +446,7 @@ export default class Profile extends Component {
                   }}>
                   <Text
                     style={{
-                      color: Colors.edit_profile_txt_color,
+                      color: Colors.textColors,
                       fontFamily: Font.fontmedium,
                       fontSize: (mobileW * 4) / 100,
                       textAlign: config.textRotate,

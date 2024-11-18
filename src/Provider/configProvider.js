@@ -8,13 +8,18 @@ import {msgProvider, localStorage, consolepro} from './utilslib/Utils';
 global.player_id_me1 = '123456';
 //--------------------------- Config Provider Start -----------------------
 class configProvider {
-  baseURL = 'https://shinefy.co/app/admin/api/';
   baseURL1 = 'https://shinefy.co/app/webservice/';
-  img_url = 'https://shinefy.co/app/admin/api/200X200/';
-  img_url1 = 'https://shinefy.co/app/admin/api/images/400X400/';
-  img_url2 = 'https://shinefy.co/app/admin/api/images/700X700/';
-  img_url3 = 'https://shinefy.co/app/webservice/images/';
-  img_url4 = 'https://shinefy.co/app/webservice/images/200X200/';
+  burl = __DEV__ ? 'https://mobile.shinefy.co' : 'https://shinefy.co/app';
+  baseURL = this.burl + '/admin/api/';
+  // img_url = 'https://shinefy.co/app/admin/api/200X200/';
+  // img_url1 = 'https://shinefy.co/app/admin/api/images/400X400/';
+  // img_url2 = 'https://shinefy.co/app/admin/api/images/700X700/';
+  // img_url3 = 'https://shinefy.co/app/webservice/images/';
+  // img_url4 = 'https://shinefy.co/app/webservice/images/200X200/';
+  img_url = this.burl + '/admin/api/200X200/';
+  img_url1 = this.burl + '/admin/api/images/400X400/';
+  img_url2 = this.burl + '/admin/api/images/700X700/';
+  img_url3 = this.burl + '/webservice/images/';
 
   // img_url4 	= 'http://youngdecade.org/2021/cbc/webservice/image_signature/';
   login_type = 'app';

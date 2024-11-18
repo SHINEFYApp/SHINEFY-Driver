@@ -349,6 +349,7 @@ class Language_provider {
   doyou = ['Do not have an account?', 'لا تملك حساب؟'];
   already = ['Already have an accound?', 'هل لديك حساب بالفعل؟'];
 
+
   // ---------------Atul Texts--------------
   //===========14-03-2022------------
   myvehicles_txt = ['My Vehicles', 'مركباتي'];

@@ -986,7 +986,14 @@ export default class Bookings_Details extends Component {
                       {this.state.booking_arr.booking_time[config.language]}
                     </Text>
                   </View>
-                  <View
+                  
+                    {
+                     this.state.booking_arr.vehicles_arr ?
+                      this.state.booking_arr.vehicles_arr.map((item)=>{
+                        return(
+                          <>
+                          
+                               <View
                     style={{
                       width: '94%',
                       alignSelf: 'center',
@@ -1014,12 +1021,164 @@ export default class Bookings_Details extends Component {
                           fontSize: (mobileW * 3.6) / 100,
                           textAlign: 'center',
                         }}>
-                        {this.state.booking_arr.model_name[config.language]}
+                        {item.model_name[config.language]}
                       </Text>
                     </View>
-                  </View>
+                              </View>
 
-                  <View
+                              <View
+                                style={{
+                                  width: '92%',
+                                  paddingTop: (mobileW * 2.2) / 100,
+                                  flexDirection: 'row',
+                                  alignSelf: 'center',
+                                  borderBottomColor: Colors.bottom_border,
+                                  borderBottomWidth: 0.5,
+                                  justifyContent: 'center',
+                                  alignItems: 'center',
+                                  backgroundColor: 'white',
+                                  paddingBottom: (mobileW * 3.5) / 100,
+                                }}>
+                                <View
+                                  style={{
+                                    width: '25%',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    backgroundColor: Colors.appColor,
+                                    borderRadius: (mobileW * 1.5) / 100,
+                                    alignSelf: 'center',
+                                  }}>
+                                  <Text
+                                    style={{
+                                      color: Colors.white_color,
+                                      fontFamily: Font.fontsemibold,
+                                      fontSize: (mobileW * 3.7) / 100,
+                                      marginTop: (mobileW * 2) / 100,
+                                    }}>
+                                    {item.vehicle_name[config.language]}
+                                  </Text>
+                                  <Image
+                                    source={{
+                                      uri:
+                                        config.img_url3 +
+                                        item.vehicle_image,
+                                    }}
+                                    style={{
+                                      height: (mobileW * 15) / 100,
+                                      width: (mobileW * 17) / 100,
+                                      marginBottom: (mobileW * 1) / 100,
+                                    }}
+                                  />
+                                </View>
+                                <View
+                                  style={{
+                                    width: '33%',
+                                    alignItems: 'center',
+                                    marginTop: (mobileW * 3) / 100,
+                                  }}>
+                                  <View
+                                    style={{
+                                      alignSelf: 'center',
+                                      paddingVertical: (mobileW * 0.9) / 100,
+                                      alignItems: 'center',
+                                    }}>
+                                    <Text style={styles.text_style}>
+                                      {Lang_chg.platenumber_txt[config.language]}
+                                    </Text>
+                                  </View>
+                                  <View
+                                    style={{
+                                      alignSelf: 'center',
+                                      paddingVertical: (mobileW * 3.5) / 100,
+                                      justifyContent: 'center',
+                                      alignItems: 'center',
+                                    }}>
+                                    <Text style={styles.text_style1}>
+                                      {item.plate_number}
+                                    </Text>
+                                  </View>
+                                </View>
+                                <View
+                                  style={{
+                                    borderRightWidth: (mobileW * 0.3) / 100,
+                                    borderRightColor: Colors.appColor,
+                                    height: (mobileW * 16) / 100,
+                                    marginTop: (mobileW * 4) / 100,
+                                  }}
+                                />
+                                <View
+                                  style={{
+                                    width: '27%',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    alignSelf: 'center',
+                                  }}>
+                                  <View style={{paddingVertical: (mobileW * 2) / 100}}>
+                                    <Text style={styles.text_style}>
+                                      {Lang_chg.make_txt[config.language]}
+                                    </Text>
+                                  </View>
+                                  <View style={{}}>
+                                    <Image
+                                      source={{
+                                        uri:
+                                          config.img_url3 +
+                                          item.make_image,
+                                      }}
+                                      style={{
+                                        height: (mobileW * 9) / 100,
+                                        width: (mobileW * 12) / 100,
+                                      }}
+                                    />
+                                  </View>
+                                </View>
+                                <View
+                                  style={{
+                                    borderRightWidth: (mobileW * 0.3) / 100,
+                                    borderRightColor: Colors.appColor,
+                                    height: (mobileW * 16) / 100,
+                                    marginTop: (mobileW * 4) / 100,
+                                  }}
+                                />
+                                <View
+                                  style={{
+                                    width: '16%',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    alignSelf: 'center',
+                                  }}>
+                                  <View
+                                    style={{
+                                      paddingVertical: (mobileW * 1.5) / 100,
+                                      alignSelf: 'flex-end',
+                                    }}>
+                                    <Text style={styles.text_style}>
+                                      {Lang_chg.color1_txt[config.language]}
+                                    </Text>
+                                  </View>
+                                  <View
+                                    style={{
+                                      paddingVertical: (mobileW * 2.5) / 100,
+                                      alignSelf: 'center',
+                                      marginLeft: (mobileW * 6) / 100,
+                                    }}>
+                                    <View
+                                      style={{
+                                        backgroundColor: item.color_code,
+                                        borderRadius: (mobileW * 2) / 100,
+                                        height: (mobileW * 3.5) / 100,
+                                        width: (mobileW * 3.5) / 100,
+                                      }}
+                                    />
+                                  </View>
+                                </View>
+                              </View>
+                          </>
+                        )
+                      })
+                      :
+                      <>
+                          <View
                     style={{
                       width: '92%',
                       paddingTop: (mobileW * 2.2) / 100,
@@ -1166,6 +1325,8 @@ export default class Bookings_Details extends Component {
                       </View>
                     </View>
                   </View>
+                      </>
+                    }
 
                   <View
                     style={{
@@ -1219,6 +1380,7 @@ export default class Bookings_Details extends Component {
                     </View>
                   </View>
                   {this.state.booking_arr.extra_services != 'NA' && (
+                
                     <View style={{width: (mobileW * 90) / 100}}>
                       <View
                         style={{
